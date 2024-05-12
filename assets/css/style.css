@@ -36,13 +36,14 @@ html {
     width: 300px;
     height: 300px;
     border: solid 1px white;
+    overflow: hidden;
 }
 
 .video__layout {
     width: 100%;
     height: calc(100vh - 80px);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -62,6 +63,49 @@ html {
     width: 100%;
     height: 100%;
 }
+
+.up__video {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.down__video {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #000000cc;
+    width: 600px;
+    height: 100px;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.label__text {
+    color: white;
+    font-size: 1.7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__threshold {
+    background-color: #82CFD0;
+    border: solid 1px #82CFD0;
+    border-radius: 8px;
+    height: 7px;
+    width: 150px;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.threshold__text {
+    margin: 0px 10px;
+}
+
 
 .canvas__container {
     width: 300px;

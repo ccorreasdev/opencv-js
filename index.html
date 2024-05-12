@@ -16,15 +16,32 @@
             <div class="nav__title">OPENCV.JS</div>
         </nav>
         <div class="video__layout">
-            <div class="video__container">
-                <video id="video" class="video__frame" autoplay></video>
+            <div class="up__video">
+                <div class="video__container">
+                    <video id="video" class="video__frame" autoplay></video>
+                </div>
+                <div class="canvas__container">
+                    <canvas id="canvas" class="canvas__frame"></canvas>
+                </div>
             </div>
 
-            <div class="canvas__container">
-                <canvas id="canvas" class="canvas__frame"></canvas>
+            <div class="down__video">
+                <div class="label__text">
+                    Color selection:
+                    <input type="color" id="color-picker" name="colorPicker" value="#ff0000">
+                </div>
+
+                <div class="label__text">
+                    Threshold: <span class="threshold__text" id="threshold-value"> 50</span>
+                    <input class="slider__threshold" type="range" id="slider" name="slider" min="0" max="100" value="50"
+                        step="1">
+                </div>
+
             </div>
+
 
         </div>
+
 
     </main>
 </body>
