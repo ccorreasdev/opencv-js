@@ -6,13 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script defer type="module" src="./assets/js/script.js"></script>
+    <script defer type="text/javascript" src="./assets/js/opencv.js"></script>
     <title>OpenCV.js</title>
 </head>
 
 <body>
     <main class="layout">
+        <nav class="nav__layout">
+            <div class="nav__title">OPENCV.JS</div>
+        </nav>
+        <div class="video__layout">
+            <div class="video__container">
+                <video id="video" class="video__frame" autoplay></video>
+            </div>
 
+            <div class="canvas__container">
+                <canvas id="canvas" class="canvas__frame"></canvas>
+            </div>
 
+        </div>
 
     </main>
 </body>
