@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:checked {
+    color: white;
+}
+
+a:visited {
+    color: white;
+
+}
+
+
 html {
     font-size: 62.5%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -15,20 +30,91 @@ html {
     background: linear-gradient(45deg, #242929 0% 25%, #360e16 25% 50%, #890b13 50% 75%, #d32012 75% 100%);
 }
 
+.menu__list {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    color: white;
+    font-size: 2rem;
+
+    padding-left: 3rem;
+    gap: 1rem;
+}
+
+.menu__link {
+    width: 100%;
+}
+
+.menu__item {
+    padding-left: 4rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: black;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+.menu__item:hover {
+    background-color: white;
+    color: black;
+}
+
 .nav__layout {
     width: 100%;
     height: 80px;
     background-color: #000000cc;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
 }
 
 .nav__title {
     color: white;
     font-size: 3rem;
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
+    margin-left: 3rem;
+}
+
+.nav__menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav__icon {
+    filter: invert();
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.menu__layout {
+    margin-top: 80px;
+    position: absolute;
+    background-color: rgb(36, 36, 36);
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 200ms ease-in-out;
+}
+
+.menu__layout--active {
+    opacity: 1;
+    pointer-events: all;
 }
 
 
@@ -41,12 +127,11 @@ html {
 
 .video__layout {
     width: 100%;
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .video__container {
@@ -119,4 +204,29 @@ html {
 .canvas__frame {
     width: 100%;
     height: 100%;
+}
+
+.conversion__layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.conversion__file {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.canvas__text {
+    text-align: center;
+    width: 300px;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    border: 1px solid white;
 }

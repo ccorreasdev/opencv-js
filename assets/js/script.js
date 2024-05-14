@@ -3,7 +3,10 @@ const colorPicker = document.querySelector("#color-picker");
 const video = document.getElementById('video');
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
+
 const slider = document.getElementById("slider");
+const menuBtn = document.querySelector("#menu-btn");
+const menuLayout = document.querySelector("#menu-layout");
 const thresholdValue = document.querySelector("#threshold-value");
 let selectedColorFilter = {
     "r": 217,
@@ -12,6 +15,9 @@ let selectedColorFilter = {
 };
 let threshold = 40;
 
+menuBtn.addEventListener("click", (e) => {
+    menuLayout.classList.toggle("menu__layout--active");
+});
 
 function initCamera() {
     navigator.mediaDevices.getUserMedia({ video: true })
@@ -71,13 +77,10 @@ document.addEventListener('DOMContentLoaded', initCamera);
 
 colorPicker.addEventListener("change", (e) => {
     selectedColorFilter = hexToRgb(e.target.value);
-
-
     console.log(selectedColorFilter.r);
 })
 
 slider.addEventListener("input", (e) => {
-
     threshold = parseInt(e.target.value);
     thresholdValue.innerHTML = threshold;
 })
