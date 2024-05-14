@@ -230,3 +230,7 @@ html {
     margin-bottom: 4rem;
     border: 1px solid white;
 }
+
+.input_video1 {
+    display: none;
+}
