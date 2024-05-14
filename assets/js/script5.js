@@ -1,4 +1,5 @@
-https://github.com/LintangWisesa/MediaPipe-in-JavaScript/blob/master/js/face.js
+
+
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
